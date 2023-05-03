@@ -1,0 +1,10 @@
+.rodape nav{
+    display: flex;
+    justify-content:space-evenly;
+}
+
+.rodape img{
+    width: 40%;
+    max-width: 40%;
+    display: center;
+}
