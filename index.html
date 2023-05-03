@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My-Layout</title>
     <link rel="stylesheet" href="./css/estilo.css">
+    <script src="./js/script.js" defer></script>
+
 </head>
 
 <body>
@@ -21,6 +23,8 @@
     </header>
 
     <h2 class="tit-sec">Seção de Fotos</h2>
+
+    <button id="meu-btn"><span>CLICK</span></button>
 
     <section class="conteudo">
         <div>
@@ -57,7 +61,8 @@
             <a href="#"><img src="./img/social-3.png" alt="Logo twitter"></a> -->
         </nav>
         <div>
-            <form action="index.html" method="POST" onsubmit="return true">
+            <form action="index.html" method="POST" onsubmit="return false">
+            
                 <fieldset>
                     <legend>Login</legend>
                     <div>
@@ -85,8 +90,9 @@
                         </select>
                     </fieldset>
                     </div>
-                    <div>
-                        <button type="submit">Login</button>
+                    <div class="btn">
+                        <button onclick="document.write('Olá Mundo!')" type="submit">Login</button>
+
                         <button type="reset">Limpar</button>
                     </div>
                 </fieldset>

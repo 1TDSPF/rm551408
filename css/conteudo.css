@@ -1,6 +1,6 @@
 .conteudo{
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     max-width: 80vw;
     margin: 0 auto;
 }
