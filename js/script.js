@@ -116,11 +116,11 @@
 //Recupere uma colections de elementos do tipo ( a ).
 // Identifique aqueles que são pertencentes somente ao cabeçalho e adicione o atributo style com a propriedade background-color:#ff0000;
 
-const aElements = [...document.getElementsByTagName("a")];
+// const aElements = [...document.getElementsByTagName("a")];
 
-aElements.forEach((a)=>{
-   let textoDoA = a.textContent;
-   if(textoDoA == "Home" || textoDoA == "Info" || textoDoA == "Item-3"){
-       a.setAttribute("style","background-color:#ff0000;")
-   }
-});
+// aElements.forEach((a)=>{
+//    let textoDoA = a.textContent;
+//    if(textoDoA == "Home" || textoDoA == "Info" || textoDoA == "Item-3"){
+//        a.setAttribute("style","background-color:#ff0000;")
+//    }
+// });
