@@ -1,43 +1,43 @@
-// //  Recuperando um elemento button que está no index.html
-// //  const btn  = document.getElementById("meu-btn");
+//  Recuperando um elemento button que está no index.html
+//  const btn  = document.getElementById("meu-btn");
  
-// //  //Atrelando um evento de click ao button que foi recuperado.
-// //  btn.addEventListener("click" , function(){
+ //Atrelando um evento de click ao button que foi recuperado.
+//  btn.addEventListener("click" , function(){
 
-// //     //Função Matemática - Math
-// //     //randon = gera números aleatórios enre 0 e 1. Ex: 0.232323;
-// //     //floor  = arredonda o número para baixo.
-// //     //ceil   = arredonda o número para cima.
-// //     //round  = arredonda o número aleatóriamente.
-// //     let r,g,b;
+    //Função Matemática - Math
+    //randon = gera números aleatórios enre 0 e 1. Ex: 0.232323;
+    //floor  = arredonda o número para baixo.
+    //ceil   = arredonda o número para cima.
+    //round  = arredonda o número aleatóriamente.
+//     let r,g,b;
 
-// //     r = Math.round(Math.random() *255);
-// //     g = Math.round(Math.random() *255);
-// //     b = Math.round(Math.random() *255);
+//     r = Math.round(Math.random() *255);
+//     g = Math.round(Math.random() *255);
+//     b = Math.round(Math.random() *255);
 
-// //     //Adicionando um atributo ao elemeno button
-// //     // this.setAttribute("style", "background-color:rgb("+r+","+g+","+b+");");
-// //     this.setAttribute("style", `background-color:rgb(${r},${g},${b});`);
+//     //Adicionando um atributo ao elemeno button
+//     // this.setAttribute("style", "background-color:rgb("+r+","+g+","+b+");");
+//     this.setAttribute("style", `background-color:rgb(${r},${g},${b});`);
 
-// //  } );
+//  } );
 
 
-// // //DESAFIO
-// // //Recupere o elemento tit-sec e atrele a ele um evento de mmouse a sua escolha.
-// // // Altere a cor de fundo e a cor do texto quando o evento ocorer.
-// // // const h2Element = document.getElementById("meu-tit");
-// // // // console.log(h2Element);
+//DESAFIO
+//Recupere o elemento tit-sec e atrele a ele um evento de mouse a sua escolha.
+// Altere a cor de fundo e a cor do texto quando o evento ocorer.
+// const h2Element = document.getElementById("meu-tit");
+// console.log(h2Element);
 
-// // // h2Element.addEventListener("click", function(){
-// // //     this.setAttribute("style", `background-color:#ff0000;color:#fff;`);
-// // // });
+// h2Element.addEventListener("click", function(){
+//     this.setAttribute("style", `background-color:#ff0000;color:#fff;`);
+// });
 
-// // const h2Element = document.querySelector("h2");
-// // // console.log(h2Element);
+//const h2Element = document.querySelector("h2");
+// console.log(h2Element);
 
-// // h2Element.addEventListener("click", function(){
-// //     this.setAttribute("style", `background-color:#ff0000;color:#fff;`);
-// // });
+// h2Element.addEventListener("click", function(){
+//     this.setAttribute("style", `background-color:#ff0000;color:#fff;`);
+// });
 
 
 // //Declarando um array
