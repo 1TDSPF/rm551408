@@ -1,3 +1,3 @@
 # Repositório de trabalho - Responsive Web Development
-Juan de Godeoy: rm551408
+Juan de Godoy: rm551408
 
