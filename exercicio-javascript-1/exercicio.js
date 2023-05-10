@@ -45,7 +45,7 @@ map.addEventListener("click", function(){
 const occult = document.getElementById("occult");
 const msg = document.getElementById("msg");
 
-occult.addEventListener("click", function(){
+occult.addEventListener("click", function() {
   msg.innerHTML = "";
 });
 
