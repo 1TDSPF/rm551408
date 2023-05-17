@@ -1,0 +1,8 @@
+
+.fa-eye{
+    cursor: pointer; 
+}
+
+div{
+    user-select: none;
+}
