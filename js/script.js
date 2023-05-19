@@ -1,43 +1,50 @@
-//  Recuperando um elemento button que está no index.html
-//  const btn  = document.getElementById("meu-btn");
+// // DIFERENÇA ENTRE LET/VAR/CONST
+// // var nome = "Kayque";
+// // if(nome == "Kayque"){
+// //     let nome = "Denise";
+// // }
+// // console.log(nome);
+
+// //  Recuperando um elemento button que está no index.html
+// //  const btn  = document.getElementById("meu-btn");
  
- //Atrelando um evento de click ao button que foi recuperado.
-//  btn.addEventListener("click" , function(){
+// //  //Atrelando um evento de click ao button que foi recuperado.
+// //  btn.addEventListener("click" , function(){
 
-    //Função Matemática - Math
-    //randon = gera números aleatórios enre 0 e 1. Ex: 0.232323;
-    //floor  = arredonda o número para baixo.
-    //ceil   = arredonda o número para cima.
-    //round  = arredonda o número aleatóriamente.
-//     let r,g,b;
+// //     //Função Matemática - Math
+// //     //randon = gera números aleatórios enre 0 e 1. Ex: 0.232323;
+// //     //floor  = arredonda o número para baixo.
+// //     //ceil   = arredonda o número para cima.
+// //     //round  = arredonda o número aleatóriamente.
+// //     let r,g,b;
 
-//     r = Math.round(Math.random() *255);
-//     g = Math.round(Math.random() *255);
-//     b = Math.round(Math.random() *255);
+// //     r = Math.round(Math.random() *255);
+// //     g = Math.round(Math.random() *255);
+// //     b = Math.round(Math.random() *255);
 
-//     //Adicionando um atributo ao elemeno button
-//     // this.setAttribute("style", "background-color:rgb("+r+","+g+","+b+");");
-//     this.setAttribute("style", `background-color:rgb(${r},${g},${b});`);
+// //     //Adicionando um atributo ao elemeno button
+// //     // this.setAttribute("style", "background-color:rgb("+r+","+g+","+b+");");
+// //     this.setAttribute("style", `background-color:rgb(${r},${g},${b});`);
 
-//  } );
+// //  } );
 
 
-//DESAFIO
-//Recupere o elemento tit-sec e atrele a ele um evento de mouse a sua escolha.
-// Altere a cor de fundo e a cor do texto quando o evento ocorer.
-// const h2Element = document.getElementById("meu-tit");
-// console.log(h2Element);
+// // //DESAFIO
+// // //Recupere o elemento tit-sec e atrele a ele um evento de mmouse a sua escolha.
+// // // Altere a cor de fundo e a cor do texto quando o evento ocorer.
+// // // const h2Element = document.getElementById("meu-tit");
+// // // // console.log(h2Element);
 
-// h2Element.addEventListener("click", function(){
-//     this.setAttribute("style", `background-color:#ff0000;color:#fff;`);
-// });
+// // // h2Element.addEventListener("click", function(){
+// // //     this.setAttribute("style", `background-color:#ff0000;color:#fff;`);
+// // // });
 
-//const h2Element = document.querySelector("h2");
-// console.log(h2Element);
+// // const h2Element = document.querySelector("h2");
+// // // console.log(h2Element);
 
-// h2Element.addEventListener("click", function(){
-//     this.setAttribute("style", `background-color:#ff0000;color:#fff;`);
-// });
+// // h2Element.addEventListener("click", function(){
+// //     this.setAttribute("style", `background-color:#ff0000;color:#fff;`);
+// // });
 
 
 // //Declarando um array
@@ -113,14 +120,55 @@
 //     console.log("ITEM DO NOVO ARRAY : " + nr);    
 // });
 
+//convertendo HTMLCollection em Arrays
+// const imgElements = document.getElementsByTagName("img");
+// console.log(imgElements);
+// const imgElementsArray = [...imgElements];
+// imgElementsArray.forEach((img)=>{
+//     img.setAttribute("width","3%");
+// });
+
 //Recupere uma colections de elementos do tipo ( a ).
 // Identifique aqueles que são pertencentes somente ao cabeçalho e adicione o atributo style com a propriedade background-color:#ff0000;
+//Tire um print do código e da página alterada envie no chat!
 
 // const aElements = [...document.getElementsByTagName("a")];
 
 // aElements.forEach((a)=>{
-//    let textoDoA = a.textContent;
-//    if(textoDoA == "Home" || textoDoA == "Info" || textoDoA == "Item-3"){
-//        a.setAttribute("style","background-color:#ff0000;")
-//    }
+//     let textoDoA = a.textContent;
+//     if(textoDoA == "Home" || textoDoA == "Info" || textoDoA == "Item-3"){
+//         a.setAttribute("style","background-color:#ff0000;")
+//     }
 // });
+
+
+//CRIANDO A AUTENTICAÇÃO PELO TOKEN
+if(localStorage.getItem("token-user") != null ){
+
+    //RECUPERANDO O H1 que vai apresentar o usuário!
+    const msgStatus = document.querySelector("#msg");
+
+    const avatar = document.querySelector("#imgAvatar");
+    
+    //RECUPERANDO O OBJETO DO USUÁRIO-VALIDADO NO LOCAL-STORAGE
+    const usuarioValidado = JSON.parse(localStorage.getItem("user-validado"));
+
+    //APRESENTANDO UMA DOS ATRIBUTOS DO OBJETO
+    msgStatus.innerHTML = usuarioValidado.nomeCompleto;
+    avatar.setAttribute("src",usuarioValidado.usuarioAvatar);
+
+    //BOTÃO LOGOUT
+    const botaoSair = document.querySelector("#btnSair");
+    botaoSair.setAttribute("style","display:block");
+    botaoSair.addEventListener("click",()=>{
+       //REMOVENDO O TOKEN E O USUÁRIO-VALIDADO DO LOCAL-STORAGE 
+       localStorage.removeItem("token-user");
+       localStorage.removeItem("user-validado");
+       //Após deslogar o usuário redirecionar ele para a página de LOGIN
+       window.location.href = "../login.html";
+    });
+}else{
+    window.location.href = "../login.html";
+}
+ 
+

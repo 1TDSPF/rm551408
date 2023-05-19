@@ -18,6 +18,7 @@ html{
     font-size: 3rem;
     margin: 5% 0;
 }
+
  
 /* tabela */
 
@@ -117,4 +118,8 @@ td[colspan], td[rowspan]{
     color:#fff;
     border: 1px solid #dddddd;
     border-radius: 5px;
+}
+
+#btnSair{
+    display: none;
 }
